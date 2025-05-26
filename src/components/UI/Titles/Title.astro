@@ -1,0 +1,26 @@
+---
+const {variant} = Astro.props;
+
+const getClassname = () => {
+
+    const styles = {
+        lg: "large",
+        md: "medium"
+    }
+
+    return styles[variant]
+}
+
+---
+
+<h2 class={getClassname()}><slot/></h2>
+
+<style>
+    .medium {
+        font-size: 36px;
+        font-weight: 700;
+    }
+    .large {
+        font-size: 48px;
+    }
+</style>
