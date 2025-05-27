@@ -10,7 +10,6 @@ const getContainerSize = () => {
 
     return sizes[size]
 }
-
 ---
 
 <div class={"container" + " " + getContainerSize()}>
@@ -21,11 +20,10 @@ const getContainerSize = () => {
     .container {
         margin-inline: auto;
     }
-
     .normal {
-            max-width: 1636px;
+        max-width: calc(1636px + 15px * 2);
+        padding-inline: 15px;
     }
-
     .wide {
         max-width: 1920px;
     }

@@ -1,0 +1,75 @@
+---
+import Link from "../UI/Links/Link.astro";
+import Button from "../UI/Button/Button.astro";
+---
+
+<header class="header">
+    <a class="header-logo" href="/">
+        Klyonov
+    </a>
+
+    <div class="header-navigation">
+        <nav class="header-nav-menu">
+            <ul class="header-nav-list">
+                <li class="header-nav-item">
+                    <Link>Главная</Link>
+                </li>
+                <li class="header-nav-item">
+                    <Link>Карточки</Link>
+                </li>
+                <li class="header-nav-item">
+                    <Link>Сетка</Link>
+                </li>
+                <li class="header-nav-item">
+                    <Link>Форма</Link>
+                </li>
+            </ul>
+        </nav>
+        <div class="action">
+            <Button>Связаться</Button>
+        </div>
+    </div>
+
+</header>
+
+<style>
+
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-block: 32px;
+    }
+
+    .header-logo {
+        display: flex;
+        align-items: center;
+        row-gap: 8px;
+        color: hsla(0, 84%, 60%, 1);
+        text-decoration: none;
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    .header-logo::before{
+        content: '';
+        width: 48px;
+        aspect-ratio: 1;
+        background: url('../../assets/images/logo.svg') center/contain no-repeat;
+    }
+
+    .header-navigation {
+        display: flex;
+        align-items: center;
+    }
+
+    .header-nav-menu {
+        margin-right: 42px;
+    }
+
+    .header-nav-list {
+        display: flex;
+        column-gap: 20px;
+    }
+
+</style>
