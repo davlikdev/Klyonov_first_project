@@ -1,0 +1,72 @@
+---
+
+import sticker from '../../assets/images/about-sticker.png'
+import { Image } from 'astro:assets';
+import Button from "../UI/Button/Button.astro";
+import Title from "../UI/Titles/Title.astro";
+import './about.css'
+import BackdropBlur from "../UI/Backdrop-blur/BackdropBlur.astro";
+
+
+---
+<section class="about">
+    <header class="about-header">
+        <BackdropBlur/>
+        <div class="about-salutation">
+                <span>Привет!</span>
+                <div class="about-salutation-description">
+                    <p>
+                        На этом макете ты будешь тренироваться верстке на HTML & CSS
+                    </p>
+                </div>
+            <Button>Связаться</Button>
+        </div>
+        <Image class="about-salutation-img" src={sticker} alt="About section sticker"/>
+    </header>
+    <div class="about-body">
+        <ul class="about-body-list">
+            <li class="about-body-item">
+                <Title class="about-title" variant="md">
+                    Первая карточка
+                </Title>
+                <div class="about-body-description">
+                    <p>
+                        На этой карточке должен быть какой-то осмысленный текст, но я его не придумал.
+                    </p>
+                    <p>
+                        Korem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum.
+                    </p>
+                </div>
+                <Button>Просто кнопка</Button>
+            </li>
+            <li class="about-body-item">
+                <Title class="about-title"  variant="md">
+                    Вторая карточка
+                </Title>
+                <div class="about-body-description">
+                    <p>
+                        На этой карточке должен быть какой-то осмысленный текст, но я его не придумал.
+                    </p>
+                    <p>
+                        Korem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum.
+                    </p>
+                </div>
+                <Button>Просто кнопка</Button>
+            </li>
+            <li class="about-body-item">
+                <Title class="about-title"  variant="md">
+                    Третья карточка
+                </Title>
+                <div class="about-body-description">
+                    <p>
+                        На этой карточке должен быть какой-то осмысленный текст, но я его не придумал.
+                    </p>
+                    <p>
+                        Korem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum.
+                    </p>
+                </div>
+                <Button>Просто кнопка</Button>
+            </li>
+        </ul>
+    </div>
+</section>

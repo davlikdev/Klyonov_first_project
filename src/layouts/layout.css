@@ -82,7 +82,7 @@ p {
   который расположен не последним среди своих соседних элементов
  */
 p:where(:not([class]):not(:last-child)) {
-    margin-bottom: var(--paragraphMarginBottom);
+    margin-bottom: 0;
 }
 
 
@@ -209,6 +209,7 @@ svg * {
 }
 
 body {
+    width: 100vw;
     background-color: #FAFAFA;
     font-family: 'Inter', sans-serif;
     font-size: 16px;
@@ -216,8 +217,15 @@ body {
     color: hsl(0, 0%, 0%, 0.7);
 }
 
-h1, h2, h3, h4, h5, h6, a {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
     color: #000000;
+    line-height: 1;
 }
 
 .font-wide {
@@ -236,3 +244,5 @@ h1, h2, h3, h4, h5, h6, a {
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
+
+

@@ -30,6 +30,9 @@
     column-gap: 42px;
 }
 
+.header-nav-actions {
+    flex-grow: 0    }
+
 .menu-burger {
     display: none;
 }
@@ -94,9 +97,10 @@
         flex-direction: column;
         text-align: center;
         padding-top: 160px;
-        z-index: -1;
+        z-index: -100;
         top: -100vh;
         bottom: 100vh;
+        max-width: 100vw;
     }
 
     #burger-toggle:checked ~ ul{

@@ -1,5 +1,5 @@
 ---
-const {variant} = Astro.props;
+const {class: className, variant, ...rest } = Astro.props;
 
 const getClassname = () => {
 
@@ -13,9 +13,10 @@ const getClassname = () => {
 
 ---
 
-<h2 class={getClassname()}><slot/></h2>
+<h2 class={className + " " + getClassname() } {...rest} ><slot/></h2>
 
 <style>
+
     .medium {
         font-size: 36px;
         font-weight: 700;
