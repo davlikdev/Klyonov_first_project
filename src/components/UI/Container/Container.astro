@@ -3,16 +3,18 @@ const {size} = Astro.props
 
 const getContainerSize = () => {
 
+    let baseStyles = "container";
+
     const sizes = {
         wd: "wide",
         nm: "normal"
     }
 
-    return sizes[size]
+    return `${baseStyles} ${sizes[size]}`
 }
 ---
 
-<div class={"container" + " " + getContainerSize()}>
+<div class={getContainerSize()}>
     <slot/>
 </div>
 
