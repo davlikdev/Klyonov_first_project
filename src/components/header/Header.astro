@@ -1,0 +1,50 @@
+---
+import Link from "../UI/Links/Link.astro";
+import Button from "../UI/Button/Button.astro";
+import {Image} from 'astro:assets';
+
+import './header.css'
+import logo from "../../assets/images/logo.png"
+---
+
+<header class="header">
+    <div class="header-inner">
+        <a class="header-logo" href="/">
+            <Image src={logo} alt="Klyonov logo"/>
+        </a>
+        <nav class="header-nav">
+
+            <input class="visually-hidden" id="burger-toggle" type="checkbox">
+            <label class="menu-burger" for="burger-toggle">
+                <span class="visually-hidden">Menu burger</span>
+                <span class="burger-item"></span>
+            </label>
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <Link>
+                        Главная
+                    </Link>
+                </li>
+                <li class="nav-item">
+                    <Link>
+                        Карточки
+                    </Link>
+                </li>
+                <li class="nav-item">
+                    <Link>
+                        Сетка
+                    </Link>
+                </li>
+                <li class="nav-item">
+                    <Link>
+                        Форма
+                    </Link>
+                </li>
+            </ul>
+
+            <div class="nav-actions">
+                <Button type="button">Связаться</Button>
+            </div>
+        </nav>
+    </div>
+</header>

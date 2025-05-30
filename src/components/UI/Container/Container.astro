@@ -1,0 +1,32 @@
+---
+const {size} = Astro.props
+
+const getContainerSize = () => {
+
+    let baseStyles = "container";
+
+    const sizes = {
+        wd: "wide",
+        nm: "normal"
+    }
+
+    return `${baseStyles} ${sizes[size]}`
+}
+---
+
+<div class={getContainerSize()}>
+    <slot/>
+</div>
+
+<style>
+    .container {
+        margin-inline: auto;
+    }
+    .normal {
+        max-width: calc(1636px + 15px * 2);
+        padding-inline: 15px;
+    }
+    .wide {
+        max-width: 1920px;
+    }
+</style>

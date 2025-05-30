@@ -1,0 +1,31 @@
+---
+const {class: externalStyles, variant, ...rest} = Astro.props;
+
+const getClassname = () => {
+
+    const styles = {
+        lg: "large",
+        md: "medium"
+    }
+
+    return externalStyles
+        ? `${externalStyles} ${styles[variant]}`
+        : `${styles[variant]}`
+}
+---
+
+<h2 class={getClassname()} {...rest}>
+    <slot/>
+</h2>
+
+<style>
+
+    .medium {
+        font-size: 36px;
+        font-weight: 700;
+    }
+
+    .large {
+        font-size: 48px;
+    }
+</style>

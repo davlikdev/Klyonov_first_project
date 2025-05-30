@@ -1,0 +1,126 @@
+
+.header {
+    position: relative;
+    z-index: 500;
+    padding-block: 32px;
+}
+
+.header-inner {
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-logo:hover {
+    filter: brightness(0.9);
+}
+
+.nav-list {
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+    column-gap: 42px;
+}
+
+.header-nav-actions {
+    flex-grow: 0    }
+
+.menu-burger {
+    display: none;
+}
+
+@media (max-width: 784px) {
+
+    .header {
+        padding-block: 20px;
+    }
+
+    .menu-burger {
+        position: relative;
+        display: block;
+        width: 30px;
+        height: 25px;
+    }
+
+    .burger-item, .menu-burger::after, .menu-burger::before {
+        position: absolute;
+        height: 3px;
+        background-color: #EF4444;
+        width: 100%;
+    }
+
+    .burger-item {
+        top: 11px;
+    }
+
+    .menu-burger::after {
+        content: "";
+        bottom: 0;
+    }
+
+    .menu-burger::before {
+        content: "";
+        top: 0;
+    }
+
+    #burger-toggle:checked ~ label::before {
+        transform: rotate(-45deg) translateY(15px);
+
+    }
+
+    #burger-toggle:checked ~ label::after {
+        transform: rotate(45deg) translateY(-16px);
+    }
+
+    #burger-toggle:checked ~ label .burger-item {
+        display: none;
+    }
+
+
+    .header-nav {
+        column-gap: 30px;
+    }
+
+    .nav-list {
+        position: fixed;
+        left: 0;
+        right: 0;
+        background-color: #151515;
+        flex-direction: column;
+        text-align: center;
+        padding-top: 160px;
+        z-index: -100;
+        top: -100vh;
+        bottom: 100vh;
+        max-width: 100vw;
+    }
+
+    #burger-toggle:checked ~ ul{
+        top: 0;
+        bottom: 0;
+    }
+
+    #burger-toggle:checked ~ ul .link{
+        font-size: 36px;
+        color: #FFFFFF;
+    }
+
+
+}
+
+@media (max-width: 576px) {
+    .header-nav {
+        column-gap: 16px;
+    }
+
+    #burger-toggle:checked ~ label {
+        margin-right: 10px;
+    }
+
+}
