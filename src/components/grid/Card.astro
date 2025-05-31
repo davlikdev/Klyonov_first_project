@@ -1,0 +1,15 @@
+---
+import Title from "../UI/Titles/Title.astro";
+
+const {title, description} = Astro.props
+---
+<article class="grid-body-card">
+    <Title variant="md" class="grid-card-title">
+        {title}
+    </Title>
+    <div class="grid-card-description">
+        <p>
+            {description}
+        </p>
+    </div>
+</article>
