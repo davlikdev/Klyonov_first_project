@@ -66,6 +66,12 @@
     margin-bottom: 32px;
 }
 
+@media (max-width: 1024px) {
+    .about {
+        padding-bottom: 90px;
+    }
+}
+
 @media (max-width: 784px) {
     .about-salutation-img {
         max-width: 40%;
