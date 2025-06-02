@@ -1,0 +1,11 @@
+---
+const {type: inputType, id, placeholder, ...rest} = Astro.props
+import './input.css'
+
+---
+
+<label class="visually-hidden" for={id}>
+    {placeholder}
+</label>
+
+<input type={inputType} placeholder={placeholder} id={id} {...rest}>

@@ -66,13 +66,13 @@
     margin-bottom: 32px;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1029px) {
     .about {
         padding-bottom: 90px;
     }
 }
 
-@media (max-width: 784px) {
+@media (max-width: 789px) {
     .about-salutation-img {
         max-width: 40%;
     }
@@ -92,7 +92,7 @@
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 581px) {
 
     .about-header {
         flex-direction: column-reverse;

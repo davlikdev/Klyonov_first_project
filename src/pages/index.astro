@@ -4,14 +4,18 @@ import Container from "../components/UI/Container/Container.astro";
 import Header from "../components/header/Header.astro";
 import About from "../components/about/About.astro";
 import Grid from "../components/grid/Grid.astro";
+import ContactMe from "../components/contact-me/ContactMe.astro";
 ---
 
 <Layout>
     <Container size="wd">
         <Container size="nm">
             <Header/>
-            <About/>
-            <Grid/>
+            <main>
+                <About/>
+                <Grid/>
+                <ContactMe/>
+            </main>
         </Container>
     </Container>
 
