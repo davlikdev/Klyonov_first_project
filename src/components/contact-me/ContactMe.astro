@@ -1,0 +1,32 @@
+---
+import Title from "../UI/Titles/Title.astro";
+import Input from "../UI/Input/Input.astro";
+import TextField from "../UI/Input/TextField.astro";
+import Button from "../UI/Button/Button.astro";
+import './contact-me.css'
+import ContactMeListItem from "./ContactMeListItem.astro";
+
+const steps = ['html', 'css', 'javascript', 'typescript', 'react', 'redux']
+---
+<section class="contact-me">
+    <div class="work-steps">
+        <Title variant="lg">Этапы работы</Title>
+        <ol class="work-steps-list">
+            {steps.map(s => <ContactMeListItem step={s}/>)}
+        </ol>
+    </div>
+    <form class="contact-me-form">
+        <header class="contact-me-form-header">
+            <Title variant="lg">Свяжись со мной</Title>
+        </header>
+        <div class="contact-me-form-body">
+            <div class="contact-me-input-grid">
+                <Input class="contact-me-input" placeholder="Email" type="email"/>
+                <Input class="contact-me-input" placeholder="Имя" type="text"/>
+                <TextField class="contact-me-input" placeholder="Сообщение"/>
+            </div>
+            <Button>Связаться</Button>
+        </div>
+    </form>
+</section>
+

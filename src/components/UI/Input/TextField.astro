@@ -1,0 +1,9 @@
+---
+const {text, ...rest} = Astro.props
+import './input.css'
+
+---
+
+<textarea {...rest}>{text}
+</textarea>
+

@@ -146,6 +146,11 @@ a:where([class]) {
     display: inline-flex;
 }
 
+:is(li,ol, ul):where([class]) {
+    list-style: none;
+}
+
+
 /**
   Курсор-рука при наведении на элемент
  */

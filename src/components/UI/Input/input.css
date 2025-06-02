@@ -1,0 +1,17 @@
+input, textarea {
+    border: 1px solid #E1E1E1;
+    border-radius: 12px;
+    padding: 18px 16px;
+    font-weight: 500;
+    font-size: 16px;
+    outline: none;
+    width:  100%;
+}
+
+input {
+    max-height: 55px;
+}
+
+textarea {
+    resize: none;
+}

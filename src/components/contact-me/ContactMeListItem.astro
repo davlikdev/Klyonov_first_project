@@ -1,0 +1,66 @@
+---
+const {step} = Astro.props
+---
+<li class="work-steps-item">
+    <span class="work-steps-item-deco"></span>
+    {step}
+</li>
+
+<style>
+    .work-steps-item {
+        text-transform: uppercase;
+        display: flex;
+        column-gap: 16px;
+        align-items: center;
+        position: relative;
+        padding: 0;
+        color: #000;
+    }
+
+    .work-steps-item:not(:last-child) {
+        margin-bottom: 20px;
+    }
+
+    .work-steps-item::before {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        counter-increment: ol-numbers;
+        content: counter(ol-numbers) '';
+        left: 0;
+        top: 0;
+        width: 28px;
+        aspect-ratio: 1;
+        background-color: #969696;
+        border-radius: 50%;
+        color: white;
+        font-size: 12px;
+    }
+
+    .work-steps-item-deco {
+        width: 28px;
+        height: 1px;
+        background-color: #969696;
+    }
+
+    @media (max-width: 1029px) {
+        .work-steps-item-deco {
+            width: 20px;
+            height: 1px;
+            background-color: #969696;
+        }
+    }
+    @media (max-width: 581px) {
+        .work-steps-item{
+            column-gap: 8px;
+            font-size: 12px;
+        }
+        .work-steps-item-deco {
+            width: 18px;
+        }
+
+        .work-steps-item:not(:last-child) {
+            margin-bottom: 0;
+        }
+    }
+</style>
