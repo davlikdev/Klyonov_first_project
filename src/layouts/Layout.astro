@@ -1,5 +1,7 @@
 ---
 import './layout.css'
+import Footer from "../components/footer/Footer.astro";
+import Header from "../components/header/Header.astro";
 ---
 
 <!doctype html>
@@ -15,8 +17,10 @@ import './layout.css'
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
           rel="stylesheet">
 </head>
+<Header/>
 <body>
 <slot/>
 </body>
+<Footer/>
 </html>
 

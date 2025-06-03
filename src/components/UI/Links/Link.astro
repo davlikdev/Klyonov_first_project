@@ -1,8 +1,17 @@
 ---
 import './link.css'
 
+const {class: externalStyles, href, ...rest} = Astro.props
+
+const getClassname = () => {
+    const baseStyle = "link"
+
+    return externalStyles
+        ? `${baseStyle} ${externalStyles}`
+        : `${baseStyle}`
+}
 ---
 
-<a class="link" href="/">
+<a class={getClassname()}  href={href} {...rest}>
     <slot/>
 </a>

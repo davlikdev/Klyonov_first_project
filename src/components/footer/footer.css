@@ -1,0 +1,27 @@
+footer {
+    background-color: #171717;
+
+}
+
+.footer-link {
+    color: #EF4444;
+    text-decoration: underline;
+}
+
+.footer-inner {
+    padding-block: 47px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-credits {
+    font-weight: 500;
+    color: #FFFFFF;
+}
+
+@media (max-width: 789px) {
+    .footer-inner {
+        padding-block: 30px;
+    }
+}

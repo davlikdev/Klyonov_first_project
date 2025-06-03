@@ -5,18 +5,16 @@ import Header from "../components/header/Header.astro";
 import About from "../components/about/About.astro";
 import Grid from "../components/grid/Grid.astro";
 import ContactMe from "../components/contact-me/ContactMe.astro";
+import Footer from "../components/footer/Footer.astro";
 ---
 
 <Layout>
-    <Container size="wd">
+    <main>
         <Container size="nm">
-            <Header/>
-            <main>
-                <About/>
-                <Grid/>
-                <ContactMe/>
-            </main>
+            <About/>
+            <Grid/>
+            <ContactMe/>
         </Container>
-    </Container>
 
+    </main>
 </Layout>
